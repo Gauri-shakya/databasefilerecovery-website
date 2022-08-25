@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access-Data -Recovery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arsenal&family=Balsamiq+Sans&family=Balthazar&family=Lato:ital@1&family=Libre+Baskerville&family=Mulish:wght@300&family=Noto+Sans&family=Oswald:wght@300;400&family=Sen:wght@700&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+    <!--fontowsm cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- owlcrwsl -->
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="./img/brandlogo.png" alt="logo" class="img-fluid brandlogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"> <span class="fa fa-bars text-light"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html"> Home </a>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="drop-bothlist d-flex p-2">
+                                <ul class="drop-inlist d-inline-block list-unstyled">
+                                    <li>
+                                        <a class="dropdown-item" href="mysqldatabaserecovery.html"> <i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> MySQL
+                                            Database Recovery</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="sql-database-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Database
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="dbf-recovery-software.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> DBF
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="access-data-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> Access
+                                            Database Recovery</a></li>
+                                    <li><a class="dropdown-item" href="sharepoint-server-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SharePoint
+                                            Server Recovery</a></li>
+                                </ul>
+                                <ul class="drop-inlist d-inline-block list-unstyled">
+                                    <li><a class="dropdown-item" href="sqlite-database-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQLite
+                                            Database Recovery</a></li>
+                                    <li><a class="dropdown-item" href="sql-backup-repair.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Backup
+                                            Repair</a></li>
+                                    <li><a class="dropdown-item" href="sql-log-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Log
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="advanced-mdf-recovery-pro-tool.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> Advanced MDF
+                                            Recovery Pro Tool</a></li>
+                                    <li><a class="dropdown-item" href="bkf-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> BKF
+                                            Recovery</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Free Tools
+                        </a>
+                        <ul class="dropdown-menu free-tool" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sql-reader.html"><i class="fa fa-angle-right menu-icon"
+                                        aria-hidden="true"></i> SQL Reader</a></li>
+                            <li><a class="dropdown-item" href="mdb-reader.html"><i class="fa fa-angle-right menu-icon"
+                                        aria-hidden="true"></i> MDB Reader</a></li>
+                            <li><a class="dropdown-item" href="sqlite-reader.html"><i
+                                        class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQLite Reader</a>
+                            </li>
+                        </ul>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ToolKit
+                        </a>
+                        <ul class="dropdown-menu toolkit" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sql-server-repair-kit.html"><i
+                                        class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Server
+                                    Repair</a></li>
+                        </ul>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Blog </a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="aboutus.html">About Us
+                        </a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="contactus.html">Contact
+                            Us </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <!-- live chat -->
+    <div id="chat_support">
+        <div id="ciIlCb" style="z-index:10000;position:absolute;display:none"></div>
+        <div id="scIlCb" style="display:none">
+            <a href="#" onclick="psIlCbow(); return false;" aria-label="Live chat online"> <img name="psIlCbimage"
+                    src="https://image.providesupport.com/image/sysinfotools/online-1359461460.gif" border="0"
+                    width="140" height="60" alt="Live chat online"> </a>
+        </div>
+        <div id="sdIlCb" style="display:none">
+            <script async="" src="https://www.google-analytics.com/ga.js"></script>
+            <script type="text/javascript"
+                src="https://image.providesupport.com/js/sysinfotools/safe-standard.js?ps_h=IlCb&amp;amp;ps_t=1520416274189"></script>
+        </div>
+    </div>
+    <a href="#" onclick="psIlCbow(); return false;">
+        <div id="chatrp">
+            <div id="livechatbtm" style="display: block;"><span class="iconfont"><i
+                        class="icon icn icon-chat"></i>&nbsp;</span></div>
+        </div>
+    </a>
+    <!-- live chat -->
+<!-- breadcrumb -->
+
+<div class="top-crumb">
+    <ul typeof="BreadcrumbList" class="breadcrumb">
+        <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+            <i class="icon-home"></i> <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/"><span
+                    property="name">Home</span></a>
+            <meta property="position" content="1">
+        </li>
+        <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+            <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/product-main.php"><span
+                    property="name">mysql-database-recovery</span></a>
+            <meta property="position" content="2">
+        </li>
+        <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+            <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/product-main.php"><span
+                    property="name">Bkf recovery</span></a>
+            <meta property="position" content="3">
+        </li>
+    </ul>
+</div>
+<!-- end -->
+
+    <!-- to top button--><a href="#" class="gotopbtn"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+    <!-- end -->
+    <!-- section1 -->
+    <section class="banner-section-mysql">
+        <div class="container-fluid">
+            <div class="banner-content">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="first-heading">ACCESS DATABASE RECOVERY</h1>
+                        <p class="ban-para">If you receive "unrecognized database format" error while working on a
+                            database, this means the database file is corrupt. In such situation, repair Access database
+                            is the most crucial task to perform. Try this advanced recovery tool to get best possible
+                            results by recovering the entire database content from corrupt files. Software supports
+                            Access database saved in both MDB as well as ACCDB formats. It is smartly programmed to fix
+                            header corruption and data misalignment issues in the corrupt Access database. </p>
+                        <ul class="list-unstyled para-ul">
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Efficiently repair corrupt ACCDB & MDB files. </li>
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Resolves header corruption & data misalignment issues. </li>
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Supports all Windows edition. </li>
+                        </ul> <a href="#" class="product-btn1"><i class="fa fa-download" aria-hidden="true"></i>
+                            Download
+                            Now</a> <a href="purchase.html" class="product-btn2"><i class="fa fa-shopping-cart"
+                                aria-hidden="true"></i> Purchase Now </a>
+                        <br />
+                    </div>
+                    <div class="col-md-4"> <img src="img/access-file-recovery-box.png" alt="mysql-database-box.png"
+                            class="banner-image" /> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+    <!-- screenshot -->
+    <div class="ss-content sticky-top" id="screen">
+        <a href="# " class="ban-ss px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-file"
+                aria-hidden="true"></i> <span class="br-crm">Screenshot</span></a> <a href="#features"
+            class="ban-ss px-4"><i class="fa fa-book" aria-hidden="true"></i> <span class="br-crm">Features</span></a> <a
+            href="#" class="ban-ss px-4"><i class="fa fa-video-camera" aria-hidden="true"></i> <span
+                class="br-crm">Video</span></a> <a href="#specification" class="ban-ss px-4"><i class="fa fa-book"
+                aria-hidden="true"></i> <span class="br-crm">Specification</span></a>
+    </div>
+  
+    <!-- key features -->
+    <section class="key-ft py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5"> <img src="./img/girl1.png" alt="girl1" class="img-fluid girl1"> </div>
+                <div class="col-md-7">
+                    <h2 class="text-dark fw-bold text-center py-3">Key Features</h2>
+                    <ul class=" key-feature list-unstyled  lh-lg">
+                        <li class="back-list text-dark">Recovers corrupted Access DB files without changing the original
+                            data.</li>
+                        <li class="back-list text-dark">It can restore BLOB data successfully.</li>
+                        <li class="back-list text-dark">Deals with different levels of corruption by Dual Recovery modes
+                            - Standard & Advanced.</li>
+                        <li class="back-list text-dark">Provides smart preview feature to view recovered database files.
+                        </li>
+                        <li class="back-list text-dark">Provides full preview of scanned access database files.</li>
+                        <li class="back-list text-dark">Wide compatibility with all versions of MS Windows Operating
+                            System.</li>
+                        <li class="back-list text-dark">Repairs the forms and modules of the Access Database.</li>
+                        <li class="back-list text-dark">Supports MS Access 2019, 2016, 2013, and all the earlier
+                            Versions.</li>
+                        <li class="back-list text-dark">Repairs Tables, Queries, Reports, Forms, and Index into an
+                            accessible form.</li>
+                        <li class="back-list text-dark">Allows recovery of Multilingual Data from the corrupt Access
+                            Database.</li>
+                        <li class="back-list text-dark">Offers saving of recovered Access Database as Schema or with
+                            Schema Data.</li>
+                        <li class="back-list text-dark">Easy and self instructive GUI for better understanding and to
+                            recover MS Access database files.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section2 -->
+    <section class="data-section py-5" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-dark fw-bold text-center py-3">
+                        Notable features of Access Database Recovery Tool
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/recovery-modes.png" alt="Recovery Modes"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Recovery Modes</h3>
+                        <p>There are two recovery modes for handling different level of corruption. For e.g. for minor
+                            corruption, <strong>Standard
+                                mode</strong> of recovery is capable enough to recover data from corrupt database. In
+                            case of severe corruption, <strong>Advanced mode</strong> of recovery can be useful.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/scanning.png" alt="Intensive Scanning"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Intensive Scanning</h3>
+                        <p>MDB Recovery software thoroughly scans the corrupt Access database file for errors without
+                            taking much time. It is highly capable to fix header corruption in the database. Also, if
+                            there is any data misalignment issue found in a database, the software can fix it with ease.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/restore-database.png" alt="Successful Restoration"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Successful Restoration</h3>
+                        <p>Users can restore maximum possible data from corrupt Access database, such as: tables,
+                            queries, indexes and relations. It can perform recovery of system tables and deleted records
+                            with ease. Also, it can restore <b>OLE</b>, <b>MEMO</b> and <b>BLOB</b> data from corrupt
+                            database.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/preview.png " alt="Data Preview"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Data Preview</h3>
+                        <p> Users are enabled to check their database content before saving them into a new database
+                            file. The rich-preview mode of access file recovery tool allows users to see the preview of
+                            their recovered data in order to ensure them about successful recovery from corrupt
+                            database. </p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/log.png" alt="Log Generation"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Log Generation</h3>
+                        <p> This Software supports full log generation feature by which a log file can be generated at
+                            user-defined location which contains the entire information of scanning and recovering
+                            process of database file.it is totally supported by log generation.it has all the features.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/tables.png" alt="Export Access DB Table Items"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Export Access DB Table Items</h3>
+                        <p>If you want to recover data from a corrupt MS access database, then you can select and save
+                            tables from an MDB file using this MS Access database recovery software. You can easily mark
+                            and note that notes in the desired tables to export them into your system.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/safe.png " alt="Recovery Modes"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Wide Support</h3>
+                        <p>This Access file recovery tool supports all versions of MS Access is available. It supports
+                            MDB and ACCDB files created in any version of MS Access, such as Access 97, 2000, 2002,
+                            2003, 2007, 2010, 2013 and the latest 2016.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/scanning.png " alt="Console-based Version"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Console-based Version</h3>
+                        <p>The console-based version of MDB Recovery software is available for technicians and
+                            administrators who are proficient in MS-DOS command line. As compared to GUI-based version,
+                            it is quick and more robust in performance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/ms-access.png" alt="Recover Crucial Database Objects"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Recover Crucial Database Objects</h3>
+                        <p>The Accdb database repair tool successfully restores every database object including tables,
+                            queries, relational databases, indexes, modules and macros from the corrupted ACCDB and MDB
+                            files.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/saving.png" alt="Saving Option"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Saving Option</h3>
+                        <p>After repairing the Access database file by the MDB File repair tool, there are two options
+                            for saving the repaired database file. The recovered database can either be saved at the
+                            original 'default’ location or any other location according to the user's desire on the
+                            system.It offers the feature to select all files by default for saving.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/scanning.png" alt="Auto Detect Feature"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Auto Detect Feature</h3>
+                        <p>The MDB file recovery software has an auto-detect feature that helps the user to detect the
+                            actual version of the MS Access database repair tool. The user doesn't have to specify the
+                            version of the Access Database specifically.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/compatibility.png" alt="Smooth Compatibility"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Smooth Compatibility</h3>
+                        <p>This Access database repair software is highly compatible with all popular versions of
+                            Windows operating system. It smoothly runs under Windows 98, 2000, ME, XP, Vista, Windows 7,
+                            8 and the latest version Windows 10.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section2 -->
+    <section class="back-brief py-5">
+        <div class="container-fluid">
+            <div class="product-sec">
+                <div class="row">
+                    <div class="col-md-12 px-3">
+                        <h3 class="head-third text-center fw-bold fs-1 pb-3">
+                            Technical Brief of Mysql Database Recovery
+                        </h3>
+                        <h4 class="px-3">List of common Error Messages</h4>
+                        <p class="px-3">MS Access database is also prone to corruption. When the Access database is
+                            corrupted, it can show different types of error messages when the user tries to open the DB
+                            files.You can use this software to resolve these errors.Some of the most common error
+                            messages are listed here:</p>
+                        <ol>
+                            <li class="py-2">Error 3343- Unrecognized Database Format 'filename.mdb'.</li>
+                            <li class="py-2">Error 2239- The database 'filename.mdb' needs to be repaired or isn't a
+                                database file. </li>
+                            <li class="py-2">Error 3312- Record(s) cannot be read; no read permission on 'xxxx'.</li>
+                            <li class="py-2">Error 3049- Cannot open database 'filename.mdb'. It may not be a database
+                                that your application recognizes, or the file may be corrupt.</li>
+                            <li class="py-2">Error 3011- The Microsoft Jet database engine could not find the object
+                                'xxxx'. Make sure the object exists and that you spell its name and the path name
+                                correctly.</li>
+                            <li class="py-2">Error 3033- You do not have the necessary permissions to use the
+                                'filename.mdb' object. Have your system administrator or the person who created the
+                                object establish the appropriate permissions for you.</li>
+                            <li>Error 35012- Unexpected error.</li>
+                            <li class="py-2">Error 3259- Invalid field data type.</li>
+                            <li class="py-2">Error 3022-The changes you requested to the table were not successful
+                                because they would create duplicate values in the index, primary key, or relationship.
+                            </li>
+                            <li class="py-2">Error 9505-Microsoft Access has detected that this database is in an
+                                inconsistent state, and will attempt to recover the database. During this process, a
+                                backup copy of the database will be made and all recovered objects will be placed in a
+                                new database. Access will then open the new database. The names of objects that were not
+                                successfully recovered will be logged in the “Recovery Errors” table.</li>
+                            <li class="py-2">Microsoft Access asks for a password when opening a corrupt database.</li>
+                            <li class="py-2">Error 29081-The database cannot be opened because the VBA project contained
+                                in it cannot be read. The database can be opened only if the VBA project is first
+                                deleted. Deleting the VBA project removes all code from modules, forms, and reports. You
+                                should back up your database before attempting to open the database and delete the VBA
+                                project.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- specification -->
+    <section class="specific-section py-5" id="specification">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-dark fw-bold text-center fs-2 py-3">Specification</h4>
+                    <ul class="list-unstyled specs-list">
+                        <li class="back-list text-dark lh-lg"><strong>Supported Windows Editions:</strong> Windows
+                            7/8/8.1/10, 2008/2012 (32-bit & 64-bit), 2000, 2003/2008/XP/ Vista.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Hard Disk Space:</strong> Enough space to save
+                            recovered data.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Processor:</strong> Pentium class processor.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Recommended RAM:</strong> 512 MB to 1GB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="head-five text-center">Download Trail Version For Free Evaluation</h4>
+                    <hr>
+                    <p class="specific-para">We strongly recommend users to download the free MS Access Database
+                        Recovery software version for free evaluation. Demo version works exactly the same as the
+                        licensed/Full version. Via demo version of MS access file repair online free tool, you can scan
+                        the corrupt MS Access database and check the preview of your file content. Whereas, if you want
+                        to save the recovered data, you must have the licensed version of Access recovery.</p>
+                    <h5 class="py-2">FAQ</h5>
+                    <div class="accordion">
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle1" name="toggle" />
+                            <label for="toggle1">Q. Does this DBF database recovery tool supports all FoxPro
+                                versions?</label>
+                            <div class="accordion-content">
+                                <p> Yes, you can repair DBF file of all FoxPro( FoxBase) versions. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle2" name="toggle" />
+                            <label for="toggle2">Q. Does this DBF file repair tool repair corrupt DBF file?</label>
+                            <div class="accordion-content">
+                                <p>Efficiently it repairs tables of corrupt DBF file and gives you the desired output (
+                                    including binary and memo data) without any alteration. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle3" name="toggle" />
+                            <label for="toggle3">Q. How many database programs does it support?</label>
+                            <div class="accordion-content">
+                                <p> This DBF file repair software supports almost all database programs such as Visual
+                                    FoxPro, dBXL, Clipper, dBFast, Arago, CodeBase and many other. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- specification end -->
+    <!-- Comparison  section4-->
+    <section class="compare-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-dark fw-bold text-center fs-2 py-3">Difference between Demo &amp; Full Version</h4>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-headings">
+                            <tr>
+                                <th>Features Available</th>
+                                <th class="text-center">Demo Version</th>
+                                <th class="text-center">Full Version</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-content">Repair corrupt MDB & ACCDB file</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Supports large MEMO, BLOB & OLE data</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Fix header corruption & data misalignment</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Repair access file objects & data</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Offers to Save Recovered Output</td>
+                                <td class="text-center td-data"> <i class="fa fa-times com-cross"
+                                        aria-hidden="true"></i> </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">24*7 Technical Support</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-bottom"><strong>Price</strong></td>
+                                <td class="text-center td-bottom"><strong>Free</strong></td>
+                                <td class="text-center td-bottom"><strong>$69</strong></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/money-back-guarantee.png" alt=" money-back-guarantee"
+                                        class="img-fluid" /></td>
+                                <td class="text-center py-5"> <a href="#" class="table-button-1"><i
+                                            class="fa fa-download" aria-hidden="true"></i>
+                                        <span class="download-icon">Download Now</span> </a> </td>
+                                <td class="text-center py-5"> <a href="purchase.html" class="banner-button"><i
+                                            class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <span class="download-icon"> Purchase Now</span>
+                                    </a> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+    <!-- section 5 -->
+    <div class="container-fluid accord">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-dark fw-bold text-center fs-2 py-3">Frequently Asked Question</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="accordion">
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle4" name="toggle" />
+                        <label for="toggle4">Q. Is it necessary to install MS Access Database, to access recovered
+                            output?</label>
+                        <div class="accordion-content">
+                            <p> Yes, it is necessary to install MS Access, if you want to repair access file by using
+                                this access database repair software. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle5" name="toggle" />
+                        <label for="toggle5">Q. Does this access repair tool run in all versions of Access
+                            database?</label>
+                        <div class="accordion-content">
+                            <p> It is designed to do MDB recovery in all MS Access versions, means it supports all from
+                                MS Access 97 to 2016. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle6" name="toggle" />
+                        <label for="toggle6">Q. How to avoid this error message "cannot open access database". What does
+                            it mean?</label>
+                        <div class="accordion-content">
+                            <p> Whenever your access database files( MDB and ACCDB) gets corrupted, this error appears
+                                on user screens. You can fix this error on your own if you know the right approach </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle7" name="toggle" />
+                        <label for="toggle7">Q. How many data types can it recover from corrupt Access Database?</label>
+                        <div class="accordion-content">
+                            <p> This access repair software efficiently recovers all the data types such as Numeric,
+                                Text, Varbinary, Bit, Long Binary, Big binary, Counter etc. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle8" name="toggle" />
+                        <label for="toggle8">Q. Does this access file repair tool recovers tables and deleted records of
+                            Access Database?</label>
+                        <div class="accordion-content">
+                            <p> Yes, this access file recovery tool enables users to fix tables as well as records of MS
+                                Access database. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle9" name="toggle" />
+                        <label for="toggle9">Q. Does this MDB recovery allow me to preview items of MS Access
+                            database?</label>
+                        <div class="accordion-content">
+                            <p> This access database repair tool allows users to have the preview of restored data and
+                                items. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle10" name="toggle" />
+                        <label for="toggle10">Q. How can I use and run the Access Database recovery software?</label>
+                        <div class="accordion-content">
+                            <p> You can follow the steps given below to recover repair MS Access Database:
+                            <ul>
+                                <li>Run DatabaseFileRecovery Access Database Recovery Tool</li>
+                                <li>Select or Open Access DB (MDB or ACCDB) file for Recovery by using "Browse" option
+                                </li>
+                                <li>Select recovery mode-"Standard" or "Advance"</li>
+                                <li>Find out the MS Access Versions (97 - 2016) or use “Auto Detect”</li>
+                                <li>Tick options "Show System Tables" & "Show Deleted Records"</li>
+                                <li>Tick options "Show System Tables" & "Show Deleted Records"</li>
+                                <li>Click on the "OK" button to start the scan process of DB files</li>
+                                <li>Select folder hierarchy recovered access database (MDB or ACCDB) file and see the
+                                    preview.</li>
+                                <li>Select the recovered DB of MS Access and click on the "Save" menu.</li>
+                                <li>Now select the location path or folder where you want to save the files.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle11" name="toggle" />
+                        <label for="toggle11">Q. Can this software recover MS Access file and provide preview and saving
+                            features?</label>
+                        <div class="accordion-content">
+                            <p> The software will recover the Access Database file and list all database folders with
+                                hierarchy in the left pane. Select folder and click on items to preview and save them at
+                                your desired location on the computer. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle12" name="toggle" />
+                        <label for="toggle12">Q. Does the ACCDB repair tool recovers the DB in MS Access 2019
+                            version?</label>
+                        <div class=" accordion-content ">
+                            <p> The latest Version of ACCDB/MDB Recovery Software can recover MS Access 2019 database
+                                file easily and fully. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle13" name="toggle" />
+                        <label for="toggle13">Q. Is the MDB file recovery tool capable of restoring linked tables,
+                            queries and reports?</label>
+                        <div class="accordion-content">
+                            <p>Yes, MDB repair software also recovers corrupt linked tables, queries and reports
+                                successfully in MS Access DB.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle14" name="toggle" />
+                        <label for="toggle14">Q. Is there any size limit for MS Database files?</label>
+                        <div class="accordion-content">
+                            <p>There is no such limitation enforced by the ACCDB/MDB repair software. Users can recover
+                                MS Access database files of any size using Access Recovery Tool. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle15" name="toggle" />
+                        <label for="toggle15">Q. Can this solve the error “Unrecognized database" to recover data from
+                            MS Access database?</label>
+                        <div class="accordion-content">
+                            <p>Yes, the DatabaseFileRecovery MS Access Recovery Utility can remove all corruption issues
+                                like: "Unrecognized database", "The database is in inconsistent state" and many other
+                                corruptions easily using this MDB repair tool.You can see the list of errors removed the
+                                software in the above segments.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle16" name="toggle" />
+                        <label for="toggle16">Q. Do I need to install a seperate .net framework to repair MDB?</label>
+                        <div class="accordion-content">
+                            <p>No, there is no requirement to install seperate .net framework. You only need to install
+                                the Access DB recovery software to restore files.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle17" name="toggle" />
+                        <label for="toggle17">Q. Does this tool allow repair of all objects of MDB and ACCDB
+                            Files?</label>
+                        <div class="accordion-content">
+                            <p>Yes, the MDB repair software repairs all objects of both MDB and ACCDB files in the DB.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle18" name="toggle" />
+                        <label for="toggle18">Q. Does this software support all the versions of MS Access? </label>
+                        <div class="accordion-content">
+                            <p>Yes, this Access Recovery tool supports all versions of MS Access program. It supports
+                                both MDB and ACCDB files created by MS Access 97, 98, 2000, 2002, 2003, 2007, 2010,
+                                2013,2016 and 2019.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section end -->
+    <!--section-4 client reviews -->
+    <section class="faq-main-section py-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <h4 class="client-review">Client Reviews</h4>
+                    <div class="owl-carousel owl-theme">
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">A superb way to fix and find out any no. of issues in more than
+                                        500 MDB files. No, need to worry if you have n no. of files to find out and fix
+                                        it. It is designed to fix such issues.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name ">Stephen Weaver</span> <span class="sp-spark "><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">MS Access Database Recovery tool runs smoothly and fixes any
+                                        level of corruption in ACCDB files. Very easy to use, thanks for making such an
+                                        interactive interface.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name ">Bruna Plaza</span> <span class="sp-spark "><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">After evaluating several tools performance and recovery
+                                        process. I opted for this access database recovery software and I am happy to do
+                                        that, as it delivers recovered output within a few minutes.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name ">Simona Ferri</span> <span class="sp-spark"><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content"> <img src="./img/brandlogo.png" alt="brandlogo" class="img-fluid" />
+                            <p class="f-para py-3"> Sedut perspiciatis unde erroracc usantium doloremque laudantium
+                                totam remaperiaeaque ipsa quae ab illo inventore veritatis </p>
+                            <div> <i class="fa fa-facebook fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-twitter fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-linkedin fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-instagram fb-icon" aria-hidden="true"></i> </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content ">
+                            <h4 class="foot-heads service px-1">Services</h4>
+                            <ul class="list-unstyled service-link px-1">
+                                <li class="foot-list foot-li-1"> <a href="sql-log-recovery.html" class="foot-link ">SQL Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="bkf-recovery.html" class="foot-link">BKF Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-reader.html" class="foot-link">SQL Reader</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="mdb-reader.html" class="foot-link">MDB Reader</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sqlite-reader.html" class="foot-link">SQLite Reader</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content">
+                            <h4 class="foot-heads">Important links</h4>
+                            <ul class="list-unstyled">
+                                <li class="foot-list foot-li-1"> <a href="mysqldatabaserecovery.html" class="foot-link">MySQL Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-database-recovery.html" class="foot-link"> SQL Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="access-data-recovery.html" class="foot-link">Access Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-backup-repair.html" class="foot-link">SQL Backup Repair</a>
+                                </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-log-recovery.html" class="foot-link">SQL Log Recovery</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content">
+                            <h4 class="foot-heads">Contact Info</h4>
+                            <ul class="list-unstyled contact">
+                                <li class="foot-list"> <i class="fa fa-map-marker contact-icon" aria-hidden="true"></i>
+                                    sec-57 , Noida , Uttar Pradesh </li>
+                                <li class="foot-list"> <i class="fa fa-phone contact-icon" aria-hidden="true"></i>
+                                    98989897654 </li>
+                                <li class="foot-list"> <i class="fa fa-envelope-o contact-icon"
+                                        aria-hidden="true"></i>support@sysinfotools.com</li>
+                                <li class="foot-list"> <i class="fa fa-clock-o contact-icon" aria-hidden="true"></i>
+                                    Opening Hour:9:00 - 18:00 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="copy"> &copy;Copyright 2018-<span id="curryr"></span> Database File Recovery | All
+                    rights reserved. </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end -->
+
+
+    
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Access-Data-Recovery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"> <img src="img/acs1.jpg" class="d-block w-100" alt="step-1">
+                            <p><strong>Step 1: </strong>step 1</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/acs2.jpg" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 2: </strong>step 2</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/acs3.jpg" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 3: </strong>step 3</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/acs4.jpg" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 5: </strong>step 5</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/acs5.jpg" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 5: </strong>step 5</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span> </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal end -->
+
+
+    <!-- java script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous "></script>
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/owl.carousel.js "></script>
+    <script src="js/data.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js "
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p "
+        crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js "
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF "
+        crossorigin="anonymous "></script>
+
+
+<!--footer date javascript -->
+<script>
+
+    document.getElementById("curryr").innerHTML = new Date().getFullYear();
+</script>
+
+
+
+
+    <!-- javascript -->
+    <script>
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 3,
+                },
+                1000: {
+                    items: 3,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mysqldatabaserecovery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arsenal&family=Balsamiq+Sans&family=Balthazar&family=Lato:ital@1&family=Libre+Baskerville&family=Mulish:wght@300&family=Noto+Sans&family=Oswald:wght@300;400&family=Sen:wght@700&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+    <!--fontowsm cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- owlcrwsl -->
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./img/brandlogo.png" alt="logo" class="img-fluid brandlogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"> <span class="fa fa-bars text-light"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html"> Home </a>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="drop-bothlist d-flex p-2">
+                                <ul class="drop-inlist d-inline-block list-unstyled">
+                                    <li>
+                                        <a class="dropdown-item" href="mysqldatabaserecovery.html"> <i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> MySQL
+                                            Database Recovery</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="sql-database-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Database
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="dbf-recovery-software.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> DBF
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="access-data-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> Access
+                                            Database Recovery</a></li>
+                                    <li><a class="dropdown-item" href="sharepoint-server-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SharePoint
+                                            Server Recovery</a></li>
+                                </ul>
+                                <ul class="drop-inlist d-inline-block list-unstyled">
+                                    <li><a class="dropdown-item" href="sqlite-database-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQLite
+                                            Database Recovery</a></li>
+                                    <li><a class="dropdown-item" href="sql-backup-repair.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Backup
+                                            Repair</a></li>
+                                    <li><a class="dropdown-item" href="sql-log-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Log
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="advanced-mdf-recovery-pro-tool.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> Advanced MDF
+                                            Recovery Pro Tool</a></li>
+                                    <li><a class="dropdown-item" href="bkf-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> BKF
+                                            Recovery</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Free Tools
+                        </a>
+                        <ul class="dropdown-menu free-tool" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sql-reader.html"><i class="fa fa-angle-right menu-icon"
+                                        aria-hidden="true"></i> SQL Reader</a></li>
+                            <li><a class="dropdown-item" href="mdb-reader.html"><i class="fa fa-angle-right menu-icon"
+                                        aria-hidden="true"></i> MDB Reader</a></li>
+                            <li><a class="dropdown-item" href="sqlite-reader.html"><i
+                                        class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQLite Reader</a>
+                            </li>
+                        </ul>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ToolKit
+                        </a>
+                        <ul class="dropdown-menu toolkit" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sql-server-repair-kit.html"><i
+                                        class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Server
+                                    Repair</a></li>
+                        </ul>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Blog </a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="aboutus.html">About Us
+                        </a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="contactus.html">Contact
+                            Us </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <!-- live chat -->
+    <div id="chat_support">
+        <div id="ciIlCb" style="z-index:10000;position:absolute;display:none"></div>
+        <div id="scIlCb" style="display:none">
+            <a href="#" onclick="psIlCbow(); return false;" aria-label="Live chat online"> <img name="psIlCbimage"
+                    src="https://image.providesupport.com/image/sysinfotools/online-1359461460.gif" border="0"
+                    width="140" height="60" alt="Live chat online"> </a>
+        </div>
+        <div id="sdIlCb" style="display:none">
+            <script async="" src="https://www.google-analytics.com/ga.js"></script>
+            <script type="text/javascript"
+                src="https://image.providesupport.com/js/sysinfotools/safe-standard.js?ps_h=IlCb&amp;amp;ps_t=1520416274189"></script>
+        </div>
+    </div>
+    <a href="#" onclick="psIlCbow(); return false;">
+        <div id="chatrp">
+            <div id="livechatbtm" style="display: block;"><span class="iconfont"><i
+                        class="icon icn icon-chat"></i>&nbsp;</span></div>
+        </div>
+    </a>
+    <!-- live chat -->
+
+    <!-- to top button--><a href="#" class="gotopbtn" id="topbtn"><i class="fa fa-angle-double-up"
+            aria-hidden="true"></i></a>
+    <!-- end -->
+
+    <!-- breadcrumb -->
+
+<div class="top-crumb">
+    <ul  typeof="BreadcrumbList" class="breadcrumb">
+        <li property="itemListElement" typeof="ListItem"  class="breadcrumb-item">
+            <i class="icon-home"></i> <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/"><span
+                    property="name">Home</span></a>
+            <meta property="position" content="1">
+        </li>
+        <li property="itemListElement" typeof="ListItem"  class="breadcrumb-item">
+            <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/product-main.php"><span
+                    property="name">mysql-database-recovery</span></a>
+            <meta property="position" content="2">
+        </li>
+        <li property="itemListElement" typeof="ListItem"  class="breadcrumb-item">
+        <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/product-main.php"><span
+                property="name">Bkf recovery</span></a>
+            <meta property="position" content="3">
+        </li>
+    </ul>
+</div>
+<!-- end -->
+
+    <!-- section1 -->
+    <section class="banner-section-mysql">
+        <div class="container-fluid">
+            <div class="banner-content">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="first-heading">MySQL DATABASE RECOVERY</h1>
+                        <p class="ban-para"> MySQL Database becomes inaccessible whenever there is any type of
+                            interruption in the objects like views, triggers, keys, data types etc. it leads to
+                            corruption in MySQL database. This high-end recovery software provides the feasibility to
+                            recover and saves the data in the form of script or in a fresh database. MySQL database file
+                            recovery software enables the user to perform swift recovery without any difficulty. By
+                            using this recovery tool there are fewer chances of getting several error messages. </p>
+                        <ul class="list-unstyled para-ul">
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Efficiently fixes MySQL DB objects. </li>
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Compatible with all MySQL versions. </li>
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Recover MyISAM and InnoDB storage engines. </li>
+                        </ul> <a href="#" class="product-btn1"><i class="fa fa-download" aria-hidden="true"></i>
+                            Download
+                            Now</a> <a href="purchase.html" class="product-btn2"><i class="fa fa-shopping-cart"
+                                aria-hidden="true"></i> Purchase Now</a>
+                        <br />
+                    </div>
+                    <div class="col-md-4"> <img src="img/mysql-database-box.png" alt="mysql-database-box.png"
+                            class="banner-image" /> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sec end -->
+    <!-- screenshot -->
+    <div class="ss-content sticky-top" id="screen">
+        <a href="# " class="ban-ss px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-file"
+                aria-hidden="true"></i> <span class="br-crm">Screenshot</span></a> <a href="#features" class="ban-ss px-4"><i class="fa fa-book"
+                aria-hidden="true"></i> <span class="br-crm">Features</span></a> <a href="#" class="ban-ss px-4"><i class="fa fa-video-camera"
+                aria-hidden="true"></i> <span class="br-crm">Video</span></a> <a href="#specification" class="ban-ss px-4"><i class="fa fa-book"
+                aria-hidden="true"></i> <span class="br-crm">Specification</span></a>
+    </div>
+  
+
+    <!-- key features -->
+    <section class="key-ft py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5"> <img src="./img/girl1.png" alt="girl1" class="img-fluid girl1"> </div>
+                <div class="col-md-7">
+                    <h2 class="text-dark fw-bold text-center py-3">Key Features</h2>
+                    <ul class=" key-feature list-unstyled  lh-lg">
+                        <li class="back-list text-dark">Recover and Repair severely corrupted and damaged MySQL
+                            database.</li>
+                        <li class="back-list text-dark">Efficiently fixes MySQL DB objects such as tables, keys, table
+                            properties, data types, views, triggers, etc.</li>
+                        <li class="back-list text-dark">Recover data from MyISAM and InnoDB storage engines in MySQL
+                            database.</li>
+                        <li class="back-list text-dark">Provides smart preview feature to view recovered database files.
+                        </li>
+                        <li class="back-list text-dark">Allows auto-generation of log file at user desired location.
+                        </li>
+                        <li class="back-list text-dark">Safely extracts data from Corrupt MySQL DB and saves as a new
+                            script.</li>
+                        <li class="back-list text-dark">Easy and self- instructive Graphical user interface.</li>
+                        <li class="back-list text-dark">Allows saving of recovered data in any MySQL version.</li>
+                        <li class="back-list text-dark">Wide support for all major versions of MySQL.</li>
+                        <li class="back-list text-dark">Runs smoothly on all the Windows versions</li>
+                        <li class="back-list text-dark">Repair MySQL Database for all the versions of MySQL.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section3 -->
+    <section class="data-section py-5" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-dark fw-bold text-center py-3">Notable features of MySQL Database Repair Software
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 my-2">
+                    <div class="data-product h-100"> <img src="img/repair.png" alt="Repair MySQL Database"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Repair MySQL Database</h3>
+                        <p>Advanced solution to recover and repair MySQL database. Overall it is designed to repair
+                            table properties, keys of MyISAM & InnoDB store engines present in MySQL Database. By, few
+                            keystrokes and clicks a user can recover and save the important data present in MySQL
+                            Database.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="data-product h-100"> <img src="img/preview.png" alt="Presentable Data Preview"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Presentable Data Preview</h3>
+                        <p>After the successful completion of scanning process, the user can preview the database
+                            objects in a tree structured format and for advanced preview, the content of the MySQL
+                            Database is shown separately in the list control of Windows.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="data-product h-100"> <img src="img/tables.png" alt="Recover MyISAM and InnoDB Tables"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Recover MyISAM and InnoDB Tables</h3>
+                        <p>It fixes tables present in both store engines (MyISAM and InnoDB) of MySQL database Mainly,
+                            MyISAM table consists of MYI, MYD and FRM files and InnoDB consists of IBDATA, IDB and FRM
+                            files which this recovery tool fixes all.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 my-2">
+                    <div class="data-product h-100"> <img src="img/script.png" alt="Save recovered data a Script"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Save recovered data a Script</h3>
+                        <p>Along with the new database user can save the recovered data in the form of MySQL scripts at
+                            the user-defined location.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="data-product h-100"> <img src="img/saving.png" alt="User-friendly interface"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Save recovered data as Database</h3>
+                        <p>MySQL Database Repair software provides an option to save recovered data in all new MySQL
+                            Database, to do so the user has to provide necessary information like port, username,
+                            password, server name in order to perform the desired action.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="data-product h-100"> <img src="img/linux.png" alt="User-friendly interface"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Support MySQL Database of LinuxUser-friendly interface</h3>
+                        <p>This software fixes MySQL database files present in Linux OS, the user just has to transfer
+                            database files and folders from Linux to Windows OS in order to perform MySQL Database file
+                            recovery.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="data-product h-100"> <img src="img/interface.png " alt="User-friendly interface"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">User-friendly interface</h3>
+                        <p>MySQL database repair tool is equipped with an interactive and detail-oriented interface so
+                            that any user can use this software very easily without any interruption.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="data-product h-100"> <img src="img/compatibility.png " alt="Compatibility"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Compatibility</h3>
+                        <p>The InnoDB recovery tool windows recovers corrupt database files created in MySQL version
+                            8.x, 6.x, 5.x, 4.x, and 3.x. The software can be safely and easily installed and run on
+                            Windows 10, 8.1, 8, 7, Vista, and XP. It also fully supports Windows Server 2012, 2008, and
+                            2003.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+    <!-- section2 -->
+    <section class="back-brief py-5">
+        <div class="container-fluid">
+            <div class="product-sec">
+                <div class="row">
+                    <div class="col-md-12 px-3">
+                        <h3 class="head-third text-center fw-bold fs-1 pb-3">
+                            Technical Brief of Mysql Database Recovery
+                        </h3>
+                        <ol>
+                            <li class="py-2">MySQL Database is a relational database management system that has been
+                                very popular MySQL databases.MySQL is an open-source license database system. So the
+                                user does not have to pay anything to use it. MySQL DB supports large databases, up to
+                                50 million rows and many more in a table. The default table size limit can be increased
+                                to a theoretical limit of 8 million terabytes (TB).</li>
+                            <li class="py-2">It is secure and MySQL is customizable. The open-source GPL license allows
+                                programmers to modify the MySQL software to fit their own specific environments making
+                                it more usable to individual business needs. </li>
+                            <li class="py-2">It has been used in a wide range of business applications like e-commerce,
+                                data warehousing, logging applications, web databases, and distributed applications.
+                            </li>
+                            <li class="py-2">Being a multi-featured tool and also due to its high reliability, fast
+                                performance, security, customization, adaptability, and ease of use MySQL has become one
+                                of the most popular and sought after open-source database management.</li>
+                            <li class="py-2">MySQL stores a lot of data in various extensions such as FRM, MYD, MYI. The
+                                .myd provides storage to table data, the .frm files store the table definitions whereas
+                                .myi are MyISAM index files.</li>
+                            <li class="py-2">The MySQL Database files can be lost due to many reasons such as careless
+                                formatting, accidental deletion, system crash, partition loss or virus infection and can
+                                be corrupted.</li>
+                            <li>It is always recommended to keep a backup of the DB files. However, if there is no
+                                backup, then this can cause permanent data loss.</li>
+                            <li class="py-2">That is why you can use the MySQL database repair software. It can easily
+                                repair and restore maximum possible data from corrupt, inaccessible and damaged MySQL
+                                database safely.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- specification -->
+    <section class="specific-section py-5" id="specification">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-dark fw-bold text-center fs-2 py-3">Specification</h4>
+                    <ul class="list-unstyled specs-list">
+                        <li class="back-list text-dark lh-lg"><strong>Supported Windows Editions:</strong> Windows
+                            7/8/8.1/10, 2008/2012 (32-bit & 64-bit), 2000, 2003/2008/XP/ Vista.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Hard Disk Space:</strong> Enough space to save
+                            recovered data.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Processor:</strong> Pentium class processor.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Recommended RAM:</strong> 512 MB to 1GB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="head-five text-center">Download Trail Version For Free Evaluation</h4>
+                    <hr>
+                    <p class="specific-para">We strongly recommend users to download the free MySQL Recovery software
+                        version for free evaluation. Demo version works exactly the same as the licensed/Full version.
+                        Via demo version, you can scan the corrupt MySQL database and check the preview of your file
+                        content. Whereas, if you want to save the recovered data, you must have the licensed version of
+                        MySQL recovery.</p>
+                    <h5 class=" py-2 fw-bold">FAQ</h5>
+                    <div class="accordion">
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle1" name="toggle" />
+                            <label for="toggle1">Q. Does this DBF database recovery tool supports all FoxPro
+                                versions?</label>
+                            <div class="accordion-content">
+                                <p> Yes, you can repair DBF file of all FoxPro( FoxBase) versions. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle2" name="toggle" />
+                            <label for="toggle2">Q. Does this DBF file repair tool repair corrupt DBF file?</label>
+                            <div class="accordion-content">
+                                <p>Efficiently it repairs tables of corrupt DBF file and gives you the desired output (
+                                    including binary and memo data) without any alteration. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle3" name="toggle" />
+                            <label for="toggle3">Q. How many database programs does it support?</label>
+                            <div class="accordion-content">
+                                <p> This DBF file repair software supports almost all database programs such as Visual
+                                    FoxPro, dBXL, Clipper, dBFast, Arago, CodeBase and many other. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- specification end -->
+    <!-- Comparison  section4-->
+    <section class="compare-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-dark fw-bold fs-2 text-center py-3">Difference between Demo &amp; Full Version</h4>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-headings">
+                            <tr>
+                                <th>Features Available</th>
+                                <th class="text-center">Demo Version</th>
+                                <th class="text-center">Full Version</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-content">Repair & Restore MyISAM & InnoDB tables</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Preview repaired data</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Fix views, tables, keys, etc.</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Save recovered data in all new database</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Save recovered data as Script</td>
+                                <td class="text-center td-data"> <i class="fa fa-times com-cross"
+                                        aria-hidden="true"></i> </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">24*7 Technical Support</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-bottom"><strong>Price</strong></td>
+                                <td class="text-center td-bottom"><strong>Free</strong></td>
+                                <td class="text-center td-bottom"><strong>$149</strong></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/money-back-guarantee.png" alt=" money-back-guarantee"
+                                        class="img-fluid" /></td>
+                                <td class="text-center py-5"> <a href="#" class="table-button-1"><i
+                                            class="fa fa-download" aria-hidden="true"></i>
+                                        <span class="download-icon">Download Now</span> </a> </td>
+                                <td class="text-center py-5"> <a href="#" class="banner-button"><i
+                                            class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <span class="download-icon"> Purchase Now</span>
+                                    </a> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+    <!-- section 5 -->
+    <div class="container-fluid accord py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-dark fw-bold fs-2 text-center py-3">Frequently Asked Question</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="accordion">
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle4" name="toggle" />
+                        <label for="toggle4">Q. Do I need to install MySQL in order to fix MySQL files while using this
+                            tool?</label>
+                        <div class="accordion-content">
+                            <p>Yes, you need to install & run MySQL in order to fix MySQL database and recover files and
+                                folders using this tool.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle5" name="toggle" />
+                        <label for="toggle5">Q. Presently, I am using MySQL version 8.0 user, can I fix previous version
+                            of MySQL database?</label>
+                        <div class="accordion-content">
+                            <p>You have to install MySQL and along with that use this tool to perform recovery. Very
+                                comfortably you can use repair InnoDB & MyISAM tables in any MySQL versions.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle6" name="toggle" />
+                        <label for="toggle6">Q. This message I am receiving "Could not find file wtlicensemanager.dll".
+                            How to fix it?</label>
+                        <div class="accordion-content">
+                            <p>This interruption is an error which you can immediately fix it with the help of MySQL
+                                Database file recovery tool. It is embedded with remarkable features which will help you
+                                to proficiently repair MySQL database.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle7" name="toggle" />
+                        <label for="toggle7">Q. Am I able to repair InnoDB & another store engine of MySQL
+                            database?</label>
+                        <div class="accordion-content">
+                            <p>This software is embedded with such features which enables the user to smoothly fix both
+                                store engine of the database. In other words, it is made to fix any issue in the MySQL
+                                database.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle8" name="toggle" />
+                        <label for="toggle8">Q. If in future I need to save MySQL database recovered data as a script.
+                            Is it possible to do it?</label>
+                        <div class="accordion-content">
+                            <p>Without any doubt, you can do it, as we understand our user requirement. Anytime you can
+                                save the recovered output of MySQL database in form of the script as well as in all new
+                                database.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle9" name="toggle" />
+                        <label for="toggle9">Q. What kind of error messages can this repair tool fix it?</label>
+                        <div class="accordion-content">
+                            <p>This MySQL Database repair software is designed and programmed to fix any level of issue
+                                and corruption in MySQL database. Some of the most common error messages which our user
+                                get:</p>
+                            <ul>
+                                <li><strong>Error 144:</strong> Table is crashed and last repair failed. </li>
+                                <li><strong>Error 136:</strong> No more room in the index file. </li>
+                                <li><strong>Error 126:</strong> Index file is crashed/ wrong file format. </li>
+                                <li><strong>Error 134:</strong> Record was already deleted. </li>
+                            </ul>
+                            <p class="margin-top-10">Without any trouble, you can fix it all. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle10" name="toggle" />
+                        <label for="toggle10">Q. Can I recover and repair MySQL Database created on the Linux
+                            system?</label>
+                        <div class="accordion-content">
+                            <p>The DatabaseFileRecovery Repair for MySQL repairs databases created on Linux computers.
+                                You can follow the steps given below:</p>
+                            <ul>
+                                <li>First porting out the MySQL database folders and 'ibdata1' file from your Linux
+                                    system to another Windows System </li>
+                                <li>Now, install and run the software on your Windows system to recover MySQL database
+                                    that was originally created on Linux.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle11" name="toggle" />
+                        <label for="toggle11">Q. Is the MySQL recovery tool suitable for older version of
+                            Windows?</label>
+                        <div class="accordion-content">
+                            <p>Yes, the MySQL repair tool online can easily recover database files on any version of
+                                Windows.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle12" name="toggle" />
+                        <label for="toggle12">Q. Is it mandatory that MySQL is installed in the system for getting
+                            previews and saving recovered files?</label>
+                        <div class="accordion-content">
+                            <p>If you wish to preview database files, then there is no prior requirement for MySQL to be
+                                installed on the system. But, MySQL is needed if you wish to save files after using the
+                                MySQL Repair database software.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle13" name="toggle" />
+                        <label for="toggle13">Q. How to recover corrupted MySQL database if I have MySQL 8.x?</label>
+                        <div class="accordion-content">
+                            <p>You can easily repair the corrupt MySQL database of MySQL 8.x version as this tool
+                                supports all the latest and older MySQL version such as 8.x, 6.x, 5.x, 4.x, and 3.x.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle14" name="toggle" />
+                        <label for="toggle14">Q. Can this Mysql DB Repair tool solve error- “MySQL table is marked as
+                            crashed and last repair failed” error in MySQL?</label>
+                        <div class="accordion-content">
+                            <p>Yes, you can use this utility to easily fix this error.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle15" name="toggle" />
+                        <label for="toggle15">Q. MySQL database is corrupt and is created in MySQL 4.x version. Can I
+                            save the recovered files in MySQL 8.x version?</label>
+                        <div class="accordion-content">
+                            <p>Yes, the software can repair your database created in MySQL version 4.x even. After that
+                                it allows you to save the recovered DB files in MySQL 8.x version. You can also save
+                                files in any other version of your choice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+        <!--section-4 client reviews -->
+        <section class="faq-main-section py-5">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-11">
+                        <h4 class="client-review">Client Reviews</h4>
+                        <div class="owl-carousel owl-theme">
+                            <div class="main-crwsl-cl">
+                                <div class="item">
+                                    <div class="user-cont">
+                                        <p class="faq-paras">Now, I am free of error messages which I was getting on a
+                                            frequent basis. Thanks to your team for designing this MySQL Database
+                                            Recovery tool.</p>
+                                    </div>
+                                    <div class="adam d-flex">
+                                        <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                        <div> <span class="User-name">Tim Campbell</span> <span class="sp-spark">
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark " aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>
+                                            </span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-crwsl-cl">
+                                <div class="item">
+                                    <div class="user-cont">
+                                        <p class="faq-paras">mazed by the superb performance of this tool, as it swiftly
+                                            recovers MySQL database objects and tables in a few seconds.</p>
+                                    </div>
+                                    <div class="adam d-flex">
+                                        <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                        <div> <span class="User-name">Zoe Lang</span> <span class="sp-spark">
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>
+                                            </span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-crwsl-cl">
+                                <div class="item">
+                                    <div class="user-cont">
+                                        <p class="faq-paras">Because, of this tool, I am now rid of several error
+                                            messages in a secured way. Need to say keep up the good work.</p>
+                                    </div>
+                                    <div class="adam d-flex">
+                                        <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                        <div> <span class="User-name">Mauro Horner</span> <span class="sp-spark">
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark " aria-hidden="true"></i>
+                                            </span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-crwsl-cl">
+                                <div class="item">
+                                    <div class="user-cont">
+                                        <p class="faq-paras">This is a very easy and useful utility that makes it very
+                                            easy to save the recovered MySQL database of older versions into newer
+                                            version of MySQL</p>
+                                    </div>
+                                    <div class="adam d-flex">
+                                        <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                        <div> <span class="User-name">Adam Trauman</span> <span class="sp-spark">
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;
+                                                <i class="fa fa-star icon-spark" aria-hidden="true"></i>
+                                            </span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end -->
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-part">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="footer-content"> <img src="./img/brandlogo.png" alt="brandlogo"
+                                    class="img-fluid" />
+                                <p class="f-para py-3"> Sedut perspiciatis unde erroracc usantium doloremque laudantium
+                                    totam remaperiaeaque ipsa quae ab illo inventore veritatis</p>
+                                <div> <i class="fa fa-facebook fb-icon" aria-hidden="true"></i> <i
+                                        class="fa fa-twitter fb-icon" aria-hidden="true"></i> <i
+                                        class="fa fa-linkedin fb-icon" aria-hidden="true"></i> <i
+                                        class="fa fa-instagram fb-icon" aria-hidden="true"></i> </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="footer-content">
+                                <h4 class="foot-heads service px-1">Services</h4>
+                                <ul class="list-unstyled service-link px-1">
+                                    <li class="foot-list foot-li-1"> <a href="sql-log-recovery.html"
+                                            target="_blank" class="foot-link">SQL
+                                            Recovery</a> </li>
+                                    <li class="foot-list foot-li-1"> <a href="bkf-recovery.html" target="_blank"
+                                            class="foot-link">BKF Recovery</a> </li>
+                                    <li class="foot-list foot-li-1"> <a href="sql-reader.html" target="_blank"
+                                            class="foot-link">SQL Reader</a> </li>
+                                    <li class="foot-list foot-li-1"> <a href="mdb-reader.html" target="_blank"
+                                            class="foot-link">MDB Reader</a> </li>
+                                    <li class="foot-list foot-li-1"> <a href="sqlite-reader.html" target="_blank"
+                                            class="foot-link">SQLite Reader</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="footer-content">
+                                <h4 class="foot-heads">Important links</h4>
+                                <ul class="list-unstyled">
+                                    <li class="foot-list foot-li-1"> <a href="mysqldatabaserecovery.html"
+                                            target="_blank" class="foot-link">MySQL
+                                            Database
+                                            Recovery</a> </li>
+                                    <li class="foot-list foot-li-1"> <a href="sql-database-recovery.html"
+                                            target="_blank" class="foot-link">SQL
+                                            Database
+                                            Recovery</a> </li>
+                                    <li class="foot-list foot-li-1"> <a href="access-data-recovery.html" target="_blank"
+                                            class="foot-link">Access
+                                            Database
+                                            Recovery</a> </li>
+                                    <li class="foot-list foot-li-1"> <a href="sql-backup-repair.html" target="_blank"
+                                            class="foot-link">SQL Backup
+                                            Repair</a> </li>
+                                    <li class="foot-list foot-li-1"> <a href="sql-log-recovery.html" target="_blank"
+                                            class="foot-link">SQL Log
+                                            Recovery</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="footer-content">
+                                <h4 class="foot-heads">Contact Info</h4>
+                                <ul class="list-unstyled contact">
+                                    <li class="foot-list"> <i class="fa fa-map-marker contact-icon"
+                                            aria-hidden="true"></i> sec-57 , Noida , Uttar Pradesh </li>
+                                    <li class="foot-list"> <i class="fa fa-phone contact-icon" aria-hidden="true"></i>
+                                        98989897654 </li>
+                                    <li class="foot-list"> <i class="fa fa-envelope-o contact-icon"
+                                            aria-hidden="true"></i>support@sysinfotools.com </li>
+                                    <li class="foot-list"> <i class="fa fa-clock-o contact-icon"
+                                            aria-hidden="true"></i> Opening Hour:9:00 - 18:00 </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="copy"> &copy;Copyright 2018-<span id="curryr"></span> Database File Recovery | All
+                        rights reserved. </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Databaserecovery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"> <img src="img/mysql s1.png" class="d-block w-100"
+                                alt="step-1">
+                            <p><strong>Step 1: </strong>step 1</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/mysql s2.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 2: </strong>step 2</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/mysql s3.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 3: </strong>step 3</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/mysql s4.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 5: </strong>step 5</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/mysql s5.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 5: </strong>step 5</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span> </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal end -->
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/data.js"></script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+        <!-- javascript -->
+<script>
+
+    document.getElementById("curryr").innerHTML = new Date().getFullYear();
+</script>
+
+
+        <script>
+            $(".owl-carousel ").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                    1000: {
+                        items: 3,
+                    },
+                },
+            });
+        </script>
+</body>
+
+</html>

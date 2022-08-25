@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Database Recovery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arsenal&family=Balsamiq+Sans&family=Balthazar&family=Lato:ital@1&family=Libre+Baskerville&family=Mulish:wght@300&family=Noto+Sans&family=Oswald:wght@300;400&family=Sen:wght@700&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+    <!--fontowsm cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- owlcrwsl -->
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="./img/brandlogo.png" alt="logo" class="img-fluid brandlogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"> <span class="fa fa-bars text-light"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html"> Home </a>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="drop-bothlist d-flex p-2">
+                                <ul class="drop-inlist d-inline-block list-unstyled">
+                                    <li>
+                                        <a class="dropdown-item" href="mysqldatabaserecovery.html"> <i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> MySQL
+                                            Database Recovery</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="sql-database-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Database
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="dbf-recovery-software.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> DBF
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="access-data-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> Access
+                                            Database Recovery</a></li>
+                                    <li><a class="dropdown-item" href="sharepoint-server-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SharePoint
+                                            Server Recovery</a></li>
+                                </ul>
+                                <ul class="drop-inlist d-inline-block list-unstyled">
+                                    <li><a class="dropdown-item" href="sqlite-database-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQLite
+                                            Database Recovery</a></li>
+                                    <li><a class="dropdown-item" href="sql-backup-repair.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Backup
+                                            Repair</a></li>
+                                    <li><a class="dropdown-item" href="sql-log-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Log
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="advanced-mdf-recovery-pro-tool.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> Advanced MDF
+                                            Recovery Pro Tool</a></li>
+                                    <li><a class="dropdown-item" href="bkf-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> BKF
+                                            Recovery</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Free Tools
+                        </a>
+                        <ul class="dropdown-menu free-tool" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sql-reader.html"><i class="fa fa-angle-right menu-icon"
+                                        aria-hidden="true"></i> SQL Reader</a></li>
+                            <li><a class="dropdown-item" href="mdb-reader.html"><i class="fa fa-angle-right menu-icon"
+                                        aria-hidden="true"></i> MDB Reader</a></li>
+                            <li><a class="dropdown-item" href="sqlite-reader.html"><i
+                                        class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQLite Reader</a>
+                            </li>
+                        </ul>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ToolKit
+                        </a>
+                        <ul class="dropdown-menu toolkit" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sql-server-repair-kit.html"><i
+                                        class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Server
+                                    Repair</a></li>
+                        </ul>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Blog </a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="aboutus.html">About Us
+                        </a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="contactus.html">Contact
+                            Us </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <!-- live chat -->
+    <div id="chat_support">
+        <div id="ciIlCb" style="z-index:10000;position:absolute;display:none"></div>
+        <div id="scIlCb" style="display:none">
+            <a href="#" onclick="psIlCbow(); return false;" aria-label="Live chat online"> <img name="psIlCbimage"
+                    src="https://image.providesupport.com/image/sysinfotools/online-1359461460.gif" border="0"
+                    width="140" height="60" alt="Live chat online"> </a>
+        </div>
+        <div id="sdIlCb" style="display:none">
+            <script async="" src="https://www.google-analytics.com/ga.js"></script>
+            <script type="text/javascript"
+                src="https://image.providesupport.com/js/sysinfotools/safe-standard.js?ps_h=IlCb&amp;amp;ps_t=1520416274189"></script>
+        </div>
+    </div>
+    <a href="#" onclick="psIlCbow(); return false;">
+        <div id="chatrp">
+            <div id="livechatbtm" style="display: block;"><span class="iconfont"><i
+                        class="icon icn icon-chat"></i>&nbsp;</span></div>
+        </div>
+    </a>
+    <!-- live chat -->
+
+<!-- breadcrumb -->
+
+<div class="top-crumb">
+    <ul typeof="BreadcrumbList" class="breadcrumb">
+        <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+            <i class="icon-home"></i> <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/"><span
+                    property="name">Home</span></a>
+            <meta property="position" content="1">
+        </li>
+        <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+            <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/product-main.php"><span
+                    property="name">mysql-database-recovery</span></a>
+            <meta property="position" content="2">
+        </li>
+        <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+            <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/product-main.php"><span
+                    property="name">Bkf recovery</span></a>
+            <meta property="position" content="3">
+        </li>
+    </ul>
+</div>
+<!-- end -->
+
+    <!-- to top button--><a href="#" class="gotopbtn"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+    <!-- end -->
+    <!-- section1 -->
+    <section class="banner-section-mysql">
+        <div class="container-fluid">
+            <div class="banner-content">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="first-heading">SQL DATABASE RECOVERY</h1>
+                        <p class="ban-para">To repair SQL database files, a reliable recovery solution is mainly needed.
+                            This recovery software can perform SQL Server recovery with utmost accuracy and restore SQL
+                            database contents. Also, it supports recovery from NDF file, a secondary database file of
+                            SQL Server. All the recovered data can be saved into an MS SQL database file or in the form
+                            of SQL Script.</p>
+                        <ul class="list-unstyled para-ul">
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Dual
+                                recovery modes for different level of corruption. </li>
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Recovery from MDF as well as NDF files. </li>
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Supports SQL Server 2005, 2008, 2012, & 2014. </li>
+                        </ul> <a href="# " class="product-btn1"><i class="fa fa-download" aria-hidden="true"></i>
+                            Download
+                            Now</a> <a href="# " class="product-btn2"><i class="fa fa-shopping-cart"
+                                aria-hidden="true "></i>
+                            Purchase Now </a>
+                        <br />
+                    </div>
+                    <div class="col-md-4"> <img src="img/sql-database-recovery-box (1).png"
+                            alt="mysql-database-box.png" class="banner-image" /> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- screenshot -->
+<div class="ss-content sticky-top" id="screen">
+    <a href="# " class="ban-ss px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-file"
+            aria-hidden="true"></i> <span class="br-crm">Screenshot</span></a> <a href="#features"
+        class="ban-ss px-4"><i class="fa fa-book" aria-hidden="true"></i> <span class="br-crm">Features</span></a> <a
+        href="#" class="ban-ss px-4"><i class="fa fa-video-camera" aria-hidden="true"></i> <span
+            class="br-crm">Video</span></a> <a href="#specification" class="ban-ss px-4"><i class="fa fa-book"
+            aria-hidden="true"></i> <span class="br-crm">Specification</span></a>
+</div>
+   
+    <!-- key features -->
+    <section class="key-ft py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5"> <img src="./img/girl1.png" alt="girl1" class="img-fluid girl1"> </div>
+                <div class="col-md-7">
+                    <h2 class="text-dark fw-bold text-center py-3">Key Features</h2>
+                    <ul class=" key-feature list-unstyled  lh-lg">
+                        <li class="back-list text-dark">Supports SQL Server ROW-compression & PAGE-compression</li>
+                        <li class="back-list text-dark">Reliable SQL recovery software supports NDF files too.</li>
+                        <li class="back-list text-dark">Export either schema only or both data and schema of a corrupt
+                            MDF file</li>
+                        <li class="back-list text-dark">Saving of recovered data into a SQL database or SQL script</li>
+                        <li class="back-list text-dark">Preview of recovered data in enabled before saving them</li>
+                        <li class="back-list text-dark">Recovery of tables, views, store procedure, programmability,
+                            triggers, default and functions</li>
+                        <li class="back-list text-dark">Standard and Advanced recovery modes to handle minor and major
+                            corruption respectively.</li>
+                        <li class="back-list text-dark">it supports recovery from NDF file, a secondary database file of
+                            SQL Server.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section2-->
+    <div class="data-section py-5" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-dark fw-bold text-center py-3">
+                        we are Offering all kinds of <br />SQL Database Recovery
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/repair.png" alt="Complete Recovery"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Complete Recovery</h3>
+                        <p>MDF Recovery Tool supports recovery from NDF files which contain some part of the data of an
+                            MDF file. It successfully detects the data of MDF file from multiple NSF files and recovers
+                            the remaining part of the file saved in them.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/recovery-modes.png" alt="Dual Recovery Modes"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Dual Recovery Modes</h3>
+                        <p>To fix the different level of corruption, two modes are available in this SQL Repair
+                            software: Standard Mode for minor corruption issues or you can use Advanced Mode if
+                            corruption is moderate or severe, and can't be fixed in standard mode.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/restore-database.png" alt="Restore Maximum Data"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Restore Maximum Data</h3>
+                        <p>Users can successfully restore tables and other components which include views, store
+                            procedure, programmability, triggers, default, functions, etc. Also, this SQL Recovery
+                            software can recover BLOB, image or large page data from corrupt SQL database.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4  my-2">
+                        <div class="data-product h-100"> <img src="img/preview.png" alt="Rich Preview"
+                                class="imag-fluid data-image" />
+                            <h3 class="data-heads">Rich Preview</h3>
+                            <p>The rich preview of this SQL Repair software allows users to check the preview of their
+                                recovered data in the preview pane. Once the file scanning is done, users can click the
+                                items one by one to check their preview before saving them into a new file.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4  my-2">
+                        <div class="data-product h-100"> <img src="img/export.png" alt="Export Feature"
+                                class="imag-fluid data-image" />
+                            <h3 class="data-heads">Export Feature</h3>
+                            <p>Users can either export only schema for the selected tables and other components of the
+                                MDF file, or they can export both data and schema at the same time.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4  my-2">
+                        <div class="data-product h-100"> <img src="img/saving.png" alt="Smart Saving"
+                                class="imag-fluid data-image" />
+                            <h3 class="data-heads">Smart Saving</h3>
+                            <p>The recovered data can be saved into two different forms: SQL database file or MS SQL
+                                scripts. In case of saving into SQL scripts, you can define a location on your system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4  my-2">
+                        <div class="data-product h-100"> <img src="img/interface.png" alt="Rich Preview"
+                                class="Interactive GUI" />
+                            <h3 class="data-heads">Interactive GUI</h3>
+                            <p>GUI of the SQL Database Repair software is highly interactive and user-friendly. It
+                                doesn't require any prior technical skills so that even a novice user can use this
+                                software with ease.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4  my-2">
+                        <div class="data-product h-100"> <img src="img/compatibility.png" alt="Support & Compatibility"
+                                class="imag-fluid data-image" />
+                            <h3 class="data-heads">Support & Compatibility</h3>
+                            <p>This SQL repair software supports all popular versions of SQL Server including the latest
+                                2014. And it runs smoothly runs under all major Windows operating systems including Win
+                                10.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section end -->
+        <!-- specification -->
+        <section class="specific-section py-5" id="specification">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-dark fw-bold text-center fs-2 py-3">Specification</h4>
+                        <ul class="list-unstyled specs-list">
+                            <li class="back-list text-dark lh-lg"><strong>Supported Windows Editions:</strong> Windows
+                                7/8/8.1/10, 2008/2012 (32-bit & 64-bit), 2000, 2003/2008/XP/ Vista.</li>
+                            <li class="back-list text-dark lh-lg"><strong>Hard Disk Space:</strong> Enough space to save
+                                recovered data.</li>
+                            <li class="back-list text-dark lh-lg"><strong>Processor:</strong> Pentium class processor.
+                            </li>
+                            <li class="back-list text-dark lh-lg"><strong>Recommended RAM:</strong> 512 MB to 1GB</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h4 class="head-five text-center">Download Trail Version For Free Evaluation</h4>
+                        <hr>
+                        <p class="specific-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Exercitationem, dolor! </p>
+                        <h5 class=" py-2 fw-bold">FAQ</h5>
+                        <div class="accordion">
+                            <div class="accordion-tab-specs">
+                                <input type="checkbox" class="accordion-toggle" id="toggle1" name="toggle" />
+                                <label for="toggle1">Q. Does this DBF database recovery tool supports all FoxPro
+                                    versions?</label>
+                                <div class="accordion-content">
+                                    <p> Yes, you can repair DBF file of all FoxPro( FoxBase) versions. </p>
+                                </div>
+                            </div>
+                            <div class="accordion-tab-specs">
+                                <input type="checkbox" class="accordion-toggle" id="toggle2" name="toggle" />
+                                <label for="toggle2">Q. Does this DBF file repair tool repair corrupt DBF file?</label>
+                                <div class="accordion-content">
+                                    <p>Efficiently it repairs tables of corrupt DBF file and gives you the desired
+                                        output ( including binary and memo data) without any alteration. </p>
+                                </div>
+                            </div>
+                            <div class="accordion-tab-specs">
+                                <input type="checkbox" class="accordion-toggle" id="toggle3" name="toggle" />
+                                <label for="toggle3">Q. How many database programs does it support?</label>
+                                <div class="accordion-content">
+                                    <p> This DBF file repair software supports almost all database programs such as
+                                        Visual FoxPro, dBXL, Clipper, dBFast, Arago, CodeBase and many other. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    <!-- specification end -->
+    <!-- Comparison  section4-->
+    <section class="compare-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-dark fw-bold fs-2 text-center py-3">Difference between Demo &amp; Full Version</h4>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-headings">
+                            <tr>
+                                <th>Features Available</th>
+                                <th class="text-center">Demo Version</th>
+                                <th class="text-center">Full Version</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-content">Repair files of all SQL versions</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Do SQL Recovery in Advanced & Standard mode</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">SQL ROW-compression & PAGE compression</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Repair corrupt SQL Database</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Save recovered files</td>
+                                <td class="text-center td-data"> <i class="fa fa-times com-cross"
+                                        aria-hidden="true"></i> </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">24*7 Technical Support</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-bottom"><strong>Price</strong></td>
+                                <td class="text-center td-bottom"><strong>Free</strong></td>
+                                <td class="text-center td-bottom"><strong>$129</strong></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/money-back-guarantee.png" alt=" money-back-guarantee"
+                                        class="img-fluid" /> </td>
+                                <td class="text-center py-5"> <a href="#" class="table-button-1"><i
+                                            class="fa fa-download" aria-hidden="true"></i>
+                                        <span class="download-icon">Download Now</span> </a> </td>
+                                <td class="text-center py-5"> <a href="purchase.html" class="banner-button"><i
+                                            class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <span class="download-icon"> Purchase Now</span>
+                                    </a> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+    <!-- section 5 -->
+    <div class="container-fluid accord">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-dark fw-bold fs-2 text-center py-3">Frequently Asked Question</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="accordion">
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle9" name="toggle" />
+                        <label for="toggle9">Q. Is it compatible with all versions of SQL Database?</label>
+                        <div class="accordion-content">
+                            <p>Yes this SQL Repair tool supports all version of SQL such as 2000, 2005, 2008, 2012, 2014
+                                & 2016.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle5" name="toggle" />
+                        <label for="toggle5">Q. What are the various options to save repaired SQL Database?</label>
+                        <div class="accordion-content">
+                            <p>his SQL Recovery tool enables users to save recovered output in many forms:
+                            <ul>
+                                <li>You can export <strong> data and schema </strong> </li>
+                                <li>Or, export only schema </li>
+                                <li>Save as <strong> MS SQL Database </strong></li>
+                                <li>Save as <strong> SQL scripts </strong></li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle6" name="toggle" />
+                        <label for="toggle6">Q. ?Is it possible to fix the SQL Database from suspect mode?</label>
+                        <div class="accordion-content">
+                            <p>Yes, this SQL database repair software flawlessly repairs SQL database from <a
+                                    href="https://www.databasefilerecovery.com/blog/know-how-to-recover-sql-database-from-suspect-mode.html"><span
+                                        class="textBlue"> suspect mode.</span></a></p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle7" name="toggle" />
+                        <label for="toggle7">Q. Does it repair SQL Database file objects?</label>
+                        <div class="accordion-content">
+                            <p>This SQL repair tool fixes more than 50+ file objects such as views, tables, triggers,
+                                default, procedure, programmability, functions, keys, rules etc.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle8" name="toggle" />
+                        <label for="toggle8">Q. I am getting page level corruption error. What does it mean?</label>
+                        <div class="accordion-content">
+                            <p>This occurs usually occurs due to human errors such as a problem in hardware, software,
+                                virus attack etc.<a
+                                    href="https://www.databasefilerecovery.com/blog/how-to-fix-sql-page-level-corruption.html"><span
+                                        class="textBlue">
+                                        For more info</span></a>.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle10" name="toggle" />
+                        <label for="toggle10">Q. Does this SQL database repair tool alter the data of corrupt SQL
+                            database after recovery process?</label>
+                        <div class="accordion-content">
+                            <p>No, it repairs SQL database without any alteration and delivers you recovered SQL
+                                database file in minimum time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section end -->
+    <!--section-4 client reviews -->
+    <section class="faq-main-section py-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <h4 class="client-review">Client Reviews</h4>
+                    <div class="owl-carousel owl-theme">
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">A reliable tool to fix corrupt MDF and NDF files of MS SQL
+                                        Server Database in an efficient way.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name">Patrick Simon</span> <span class="sp-spark"><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">Because of this SQL Database Recovery tool now I have a choice
+                                        to fix and save the recovered data either as SQL Server Database or as SQL
+                                        scripts.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name">Aaron Macht</span> <span class="sp-spark"><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">If you are looking for a tool to resolve several data in the
+                                        SQL Server Database, then I must say one should go for this efficient tool.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name ">Alice Markle</span> <span class="sp-spark"><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content"> <img src="./img/brandlogo.png" alt="brandlogo" class="img-fluid" />
+                            <p class="f-para py-3"> Sedut perspiciatis unde erroracc usantium doloremque laudantium
+                                totam remaperiaeaque ipsa quae ab illo inventore veritatis </p>
+                            <div> <i class="fa fa-facebook fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-twitter fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-linkedin fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-instagram fb-icon" aria-hidden="true"></i> </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content ">
+                            <h4 class="foot-heads service px-1">Services</h4>
+                            <ul class="list-unstyled service-link px-1">
+                                <li class="foot-list foot-li-1"> <a href="sql-log-recovery.html" class="foot-link ">SQL Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="bkf-recovery.html" class="foot-link">BKF Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-reader.html" class="foot-link">SQL Reader</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="mdb-reader.html" class="foot-link">MDB Reader</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sqlite-reader.html" class="foot-link">SQLite Reader</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content">
+                            <h4 class="foot-heads">Important links</h4>
+                            <ul class="list-unstyled">
+                                <li class="foot-list foot-li-1"> <a href="mysqldatabaserecovery.html" class="foot-link">MySQL Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-database-recovery.html" class="foot-link"> SQL Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="access-data-recovery.html" class="foot-link">Access Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-backup-repair.html" class="foot-link">SQL Backup Repair</a>
+                                </li>
+                                <li class="foot-list foot-li-1"> <a href="#" class="foot-link">SQL Log Recovery</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content">
+                            <h4 class="foot-heads">Contact Info</h4>
+                            <ul class="list-unstyled contact">
+                                <li class="foot-list"> <i class="fa fa-map-marker contact-icon" aria-hidden="true"></i>
+                                    sec-57 , Noida , Uttar Pradesh </li>
+                                <li class="foot-list"> <i class="fa fa-phone contact-icon" aria-hidden="true"></i>
+                                    98989897654 </li>
+                                <li class="foot-list"> <i class="fa fa-envelope-o contact-icon"
+                                        aria-hidden="true"></i>support@sysinfotools.com</li>
+                                <li class="foot-list"> <i class="fa fa-clock-o contact-icon" aria-hidden="true"></i>
+                                    Opening Hour:9:00 - 18:00 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="copy"> &copy;Copyright 2018-<span id="curryr"></span> Database File Recovery | All
+                    rights reserved. </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Databaserecovery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"> <img src="img/sql-s1.png" class="d-block w-100" alt="step-1">
+                            <p><strong>Step 1: </strong>step 1</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sql-s2.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 2: </strong>step 2</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sql-s3.png" class="d-block w-100" alt="step-3">
+                            <p><strong>Step 3: </strong>step 3</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sql-s4.png" class="d-block w-100" alt="step-4">
+                            <p><strong>Step 4: </strong>step 4</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sql-s5.png" class="d-block w-100" alt="step-5">
+                            <p><strong>Step 5: </strong>step 5</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span> </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal end -->
+
+    <!-- java script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/data.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+<!--footer date javascript -->
+<script>
+
+    document.getElementById("curryr").innerHTML = new Date().getFullYear();
+</script>
+
+
+    <!-- javascript -->
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sqlite-database-recovery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arsenal&family=Balsamiq+Sans&family=Balthazar&family=Lato:ital@1&family=Libre+Baskerville&family=Mulish:wght@300&family=Noto+Sans&family=Oswald:wght@300;400&family=Sen:wght@700&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+    <!--fontowsm cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- owlcrwsl -->
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="./img/brandlogo.png" alt="logo" class="img-fluid brandlogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"> <span class="fa fa-bars text-light"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html"> Home </a>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="drop-bothlist d-flex p-2">
+                                <ul class="drop-inlist d-inline-block list-unstyled">
+                                    <li>
+                                        <a class="dropdown-item" href="mysqldatabaserecovery.html"> <i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> MySQL
+                                            Database Recovery</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="sql-database-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Database
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="dbf-recovery-software.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> DBF
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="access-data-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> Access
+                                            Database Recovery</a></li>
+                                    <li><a class="dropdown-item" href="sharepoint-server-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SharePoint
+                                            Server Recovery</a></li>
+                                </ul>
+                                <ul class="drop-inlist d-inline-block list-unstyled">
+                                    <li><a class="dropdown-item" href="sqlite-database-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQLite
+                                            Database Recovery</a></li>
+                                    <li><a class="dropdown-item" href="sql-backup-repair.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Backup
+                                            Repair</a></li>
+                                    <li><a class="dropdown-item" href="sql-log-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Log
+                                            Recovery</a></li>
+                                    <li><a class="dropdown-item" href="advanced-mdf-recovery-pro-tool.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> Advanced MDF
+                                            Recovery Pro Tool</a></li>
+                                    <li><a class="dropdown-item" href="bkf-recovery.html"><i
+                                                class="fa fa-angle-right menu-icon" aria-hidden="true"></i> BKF
+                                            Recovery</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Free Tools
+                        </a>
+                        <ul class="dropdown-menu free-tool" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sql-reader.html"><i class="fa fa-angle-right menu-icon"
+                                        aria-hidden="true"></i> SQL Reader</a></li>
+                            <li><a class="dropdown-item" href="mdb-reader.html"><i class="fa fa-angle-right menu-icon"
+                                        aria-hidden="true"></i> MDB Reader</a></li>
+                            <li><a class="dropdown-item" href="sqlite-reader.html"><i
+                                        class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQLite Reader</a>
+                            </li>
+                        </ul>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ToolKit
+                        </a>
+                        <ul class="dropdown-menu toolkit" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sql-server-repair-kit.html"><i
+                                        class="fa fa-angle-right menu-icon" aria-hidden="true"></i> SQL Server
+                                    Repair</a></li>
+                        </ul>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Blog </a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="aboutus.html">About Us
+                        </a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="contactus.html">Contact
+                            Us </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <!-- live chat -->
+    <div id="chat_support">
+        <div id="ciIlCb" style="z-index:10000;position:absolute;display:none"></div>
+        <div id="scIlCb" style="display:none">
+            <a href="#" onclick="psIlCbow(); return false;" aria-label="Live chat online"> <img name="psIlCbimage"
+                    src="https://image.providesupport.com/image/sysinfotools/online-1359461460.gif" border="0"
+                    width="140" height="60" alt="Live chat online"> </a>
+        </div>
+        <div id="sdIlCb" style="display:none">
+            <script async="" src="https://www.google-analytics.com/ga.js"></script>
+            <script type="text/javascript"
+                src="https://image.providesupport.com/js/sysinfotools/safe-standard.js?ps_h=IlCb&amp;amp;ps_t=1520416274189"></script>
+        </div>
+    </div>
+    <a href="#" onclick="psIlCbow(); return false;">
+        <div id="chatrp">
+            <div id="livechatbtm" style="display: block;"><span class="iconfont"><i
+                        class="icon icn icon-chat"></i>&nbsp;</span></div>
+        </div>
+    </a>
+    <!-- live chat -->
+
+    <!-- breadcrumb -->
+
+    <div class="top-crumb">
+        <ul typeof="BreadcrumbList" class="breadcrumb">
+            <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+                <i class="icon-home"></i> <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/"><span
+                        property="name">Home</span></a>
+                <meta property="position" content="1">
+            </li>
+            <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+                <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/product-main.php"><span
+                        property="name">mysql-database-recovery</span></a>
+                <meta property="position" content="2">
+            </li>
+            <li property="itemListElement" typeof="ListItem" class="breadcrumb-item">
+                <a property="item" typeof="WebPage" href="https://www.sysinfotools.com/product-main.php"><span
+                        property="name">Bkf recovery</span></a>
+                <meta property="position" content="3">
+            </li>
+        </ul>
+    </div>
+    <!-- end -->
+    <!-- to top button--><a href="#" class="gotopbtn"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+    <!-- end -->
+    <!-- section1 -->
+    <section class="banner-section-mysql">
+        <div class="container-fluid">
+            <div class="banner-content">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="first-heading">SQLITE DATABASE RECOVERY</h1>
+                        <p class="ban-para">SQLite database is prone to corruption just like any other database file.
+                            Sometimes corruption is not that severe, hence fixed easily without putting extreme efforts.
+                            But in a case of severe corruption, SQLite users can't fix corrupt SQLite database with that
+                            ease. A smart SQLite Database Recovery tool can save your crucial data stored in SQLite
+                            database files</p>
+                        <ul class="list-unstyled para-ul">
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Supports Corrupt Files created by SQLite2 and SQLite3 </li>
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                Restores Database Objects like Tables, Indexes, Views, Triggers, etc. </li>
+                            <li class="paraa-list"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Save
+                                SQLite Database into MDB File Formats </li>
+                        </ul> <a href="# " class="product-btn1"><i class="fa fa-download" aria-hidden="true "></i>
+                            Download Now</a> <a href="# " class="product-btn2"><i class="fa fa-shopping-cart"
+                                aria-hidden="true "></i> Purchase Now </a>
+                        <br />
+                    </div>
+                    <div class="col-md-4"> <img src="img/sqlite-database-recovery-box.png " alt="mysql-database-box.png"
+                            class="banner-image" /> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+    <!-- screenshot -->
+    <div class="ss-content sticky-top" id="screen">
+        <a href="# " class="ban-ss px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-file"
+                aria-hidden="true"></i> <span class="br-crm">Screenshot</span></a> <a href="#features"
+            class="ban-ss px-4"><i class="fa fa-book" aria-hidden="true"></i> <span class="br-crm">Features</span></a>
+        <a href="#" class="ban-ss px-4"><i class="fa fa-video-camera" aria-hidden="true"></i> <span
+                class="br-crm">Video</span></a> <a href="#specification" class="ban-ss px-4"><i class="fa fa-book"
+                aria-hidden="true"></i> <span class="br-crm">Specification</span></a>
+    </div>
+   
+    <!-- key features -->
+    <section class="key-ft py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5"> <img src="./img/girl1.png" alt="girl1" class="img-fluid girl1"> </div>
+                <div class="col-md-7">
+                    <h2 class="text-dark fw-bold text-center py-3">Key Features</h2>
+                    <ul class=" key-feature list-unstyled  lh-lg">
+                        <li class="back-list text-dark">No File Size Limitation for SQLite Database Recovery </li>
+                        <li class="back-list text-dark">Complete scanning of Columns and Indexes of Tables</li>
+                        <li class="back-list text-dark">Full support for UTF – 8 (ANSI) & UTF – 16 (Unicode) SQLite data
+                            formats</li>
+                        <li class="back-list text-dark">Provides smart preview feature to view recovered database files.
+                        </li>
+                        <li class="back-list text-dark">Allows users to save DB files as SQLite, MS Access and different
+                            SQLite versions</li>
+                        <li class="back-list text-dark">Provides smart tree-structure preview of recovered DB objects
+                            after scan.</li>
+                        <li class="back-list text-dark">Displays preview of recovered database objects before saving
+                            them</li>
+                        <li class="back-list text-dark">Allows column mapping to save recovered data in MDB format</li>
+                        <li class="back-list text-dark">Effortlessly upgrades SQLite database from SQLite2 to SQLite3.
+                        </li>
+                        <li class="back-list text-dark">Easy-to-use application with self instructive interface</li>
+                        <li class="back-list text-dark">Wide compatibility with all the older and new versions of
+                            Windows OS.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section2 -->
+    <section class="data-section py-5" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-dark fw-bold text-center py-3">
+                        Notable features of SQLite Database Recovery software
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/data-recovery.png" alt="SQLite Data Recovery"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">SQLite Data Recovery</h3>
+                        <p>If you have corrupt SQLite database, you should definitely use this software. It can
+                            successfully fix the higher level of corruption and perform SQLite data recovery with utmost
+                            accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/data-recovery.png"
+                            alt="Restore SQLite Database Objects" class="imag-fluid data-image" />
+                        <h3 class="data-heads">Restore SQLite Database Objects</h3>
+                        <p>Via this software,you can repair SQLite database. Once you successfully repair SQLite
+                            database,you can restore SQLite database objects like tables, indexes,triggers</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/search.png" alt="SQLite Database Preview"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Auto-detect File Information</h3>
+                        <p>The auto-detect feature of this SQLite Database Recovery software will detect the file
+                            information (file version, data stored format, and page size) in SQLite database before the
+                            scanning process.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/preview.png" alt="SQLite Database Preview"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">SQLite Database Preview</h3>
+                        <p>You can check the preview of your SQLite database content with the help of its smart preview
+                            feature. You can check the data before you can save them into the new database file.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/saving.png" alt="Smart Saving"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Smart Saving</h3>
+                        <p>SQLite Database Recovery tool has a smart saving feature. You can define what you want to
+                            save and where you want to save. Also, it provides you two file formats into which you can
+                            save SQLite data: <strong>SQLite database</strong> (itself) and <strong>MDB
+                                database.</strong>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/tables.png" alt="Enable Column Mapping"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Enable Column Mapping</h3>
+                        <p>Microsoft Access program doesn't support some specific data types which are supported by
+                            SQLite database. So if you're saving the recovered data into MDB database, you need to use
+                            the <strong>Column Mapping</strong> feature.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/upgrade.png" alt="yUpgrade SQLite Database"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Upgrade SQLite Database</h3>
+                        <p>Via this software, you can successfully upgrade SQLite database from SQLite2 to SQLite3. But
+                            the original SQLite database remains intact or unchanged.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/interface.png" alt="Easy-to-use Application"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Easy-to-use Application</h3>
+                        <p>It contains an easy and interactive user-interface that requires no prior technical
+                            expertise. Any technical or non-technical user can use this software with ease.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/tables.png" alt="Column Mapping Feature"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Column Mapping Feature</h3>
+                        <p>If a user wishes to save the recovered data into a new MDB format, this feature can be used.
+                            MS Access database doesn't support some of the data types which are supported by the SQLite
+                            database. In this case, users need to change the column mapping into a data type that is
+                            fully supported by the MS Access database. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/export.png" alt="Exports SQLite Database into MDB"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Exports SQLite Database into MDB</h3>
+                        <p>Sometimes the user may need to export the tables stored in the SQLite database into MDB file
+                            format that can be used in the MS Access application. This SQLite database repair software
+                            is the best option for this purpose. This SQLite DB Repair tool will effortlessly export the
+                            tables into the MDB file.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/compatibility.png" alt="Windows Compatibility"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Windows Compatibility</h3>
+                        <p>This SQLite Database Repair software smoothly runs in all Windows-based operating systems,
+                            such as <strong> 10, 8.1, 8,
+                                7, Vista, XP, 2000, 98, NT, 95</strong> and <strong>Windows Server 2012, 2008 R2, 2008,
+                                2003 R2 and 2003
+                            </strong>respectively.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  my-2">
+                    <div class="data-product h-100"> <img src="img/saving.png" alt="Extensive Support"
+                            class="imag-fluid data-image" />
+                        <h3 class="data-heads">Extensive Support</h3>
+                        <p>SQLite Database Recovery software supports both two popular SQLite database versions, such as
+                            <strong>SQLite 2</strong> and <strong>SQLite 3.</strong> Also, it supports both SQLite data
+                            formats: <strong>UTF-8 (ANSI) and UTF-16
+                                (Unicode).</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+
+    <!-- specification -->
+    <section class="specific-section py-5" id="specification">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-dark fw-bold text-center fs-2 py-3">Specification</h4>
+                    <ul class="list-unstyled specs-list">
+                        <li class="back-list text-dark lh-lg"><strong>Supported Windows Editions:</strong> Windows
+                            7/8/8.1/10, 2008/2012 (32-bit & 64-bit), 2000, 2003/2008/XP/ Vista.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Hard Disk Space:</strong> Enough space to save
+                            recovered data.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Processor:</strong> Pentium class processor.</li>
+                        <li class="back-list text-dark lh-lg"><strong>Recommended RAM:</strong> 512 MB to 1GB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <h4 class="head-five text-center">Download Trail Version For Free Evaluation</h4>
+                    <hr>
+                    <p class="specific-para">We strongly recommend users to download the demo version of SQLite Database
+                        Recovery software for free evaluation. Demo version works exactly same as the licensed version.
+                        Via demo version, you can scan corrupt SQLite database and check the preview of your file
+                        content. But to save the recovered data, you must have the licensed version.</p>
+                    <h5 class=" py-2 fs-2">FAQ</h5>
+                    <div class="accordion">
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle1" name="toggle" />
+                            <label for="toggle1">Q. Does this DBF database recovery tool supports all FoxPro
+                                versions?</label>
+                            <div class="accordion-content">
+                                <p> Yes, you can repair DBF file of all FoxPro( FoxBase) versions. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle2" name="toggle" />
+                            <label for="toggle2">Q. Does this DBF file repair tool repair corrupt DBF file?</label>
+                            <div class="accordion-content">
+                                <p>Efficiently it repairs tables of corrupt DBF file and gives you the desired output (
+                                    including binary and memo data) without any alteration. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-tab-specs">
+                            <input type="checkbox" class="accordion-toggle" id="toggle3" name="toggle" />
+                            <label for="toggle3">Q. How many database programs does it support?</label>
+                            <div class="accordion-content">
+                                <p> This DBF file repair software supports almost all database programs such as Visual
+                                    FoxPro, dBXL, Clipper, dBFast, Arago, CodeBase and many other. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- specification end -->
+    <!-- Comparison  section4-->
+    <section class="compare-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-dark fw-bold text-center fs-2 py-3">Difference between Demo &amp; Full Version</h4>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-headings">
+                            <tr>
+                                <th>Features Available</th>
+                                <th class="text-center">Demo Version</th>
+                                <th class="text-center">Full Version</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-content">Compatible with SQLite & SQLite 3 formats</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Supports ANSI & Unicode</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Restore SQLite database objects</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Save in MDB format</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">Allows to save recovered data</td>
+                                <td class="text-center td-data"> <i class="fa fa-times com-cross"
+                                        aria-hidden="true"></i> </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-content">24*7 Technical Support</td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-center td-data"> <i class="fa fa-check com-icon" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-bottom"><strong>Price</strong></td>
+                                <td class="text-center td-bottom"><strong>Free</strong></td>
+                                <td class="text-center td-bottom"><strong>$159</strong></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/money-back-guarantee.png" alt=" money-back-guarantee"
+                                        class="img-fluid" /></td>
+                                <td class="text-center py-5"> <a href="#" class="table-button-1"><i
+                                            class="fa fa-download" aria-hidden="true"></i>
+                                        <span class="download-icon">Download Now</span> </a> </td>
+                                <td class="text-center py-5"> <a href="#" class="banner-button"><i
+                                            class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <span class="download-icon"> Purchase Now</span>
+                                    </a> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+    <!-- section 5 -->
+    <div class="container-fluid accord">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-dark fw-bold text-center fs-2 py-3">Frequently Asked Question</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="accordion">
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle4" name="toggle" />
+                        <label for="toggle4">Q. Does this SQLite repair tool, supports all data types of SQLite
+                            database?</label>
+                        <div class="accordion-content">
+                            <p> This SQLite recovery software supports all the data types of SQLite database such as
+                                blob, real, integer, text, numeric etc. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle5" name="toggle" />
+                        <label for="toggle5">Q. How to save recovered data in MDB database?</label>
+                        <div class="accordion-content">
+                            <p> A user can do it, by using the map column feature of this SQLite recovery tool. To do it
+                                proficiently follow the below-mentioned procedure:
+                            <ul>
+                                <li>From tree-structure preview, select recovered object.</li>
+                                <li>Then click on Map column.</li>
+                                <li>Now, from the column mapping window, select column name (any).</li>
+                                <li>After this, define its data type.</li>
+                                <li>Now, click on the change column type.</li>
+                                <li>Then save changes.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle6" name="toggle" />
+                        <label for="toggle6">Q. Is there any option to have a preview of recovered SQLite data?</label>
+                        <div class="accordion-content">
+                            <p> This SQLite database repair tool provides an option to have a preview of recovered data
+                                before actually saving. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle7" name="toggle" />
+                        <label for="toggle7">Q. Is it necessary to be technically expert, in order to use this SQLite
+                            recovery tool proficiently?</label>
+                        <div class="accordion-content">
+                            <p>This SQLite repair tool is designed to recover the SQLite database of all versions. And,
+                                also it is equipped with an interactive interface, which means anyone can use it.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle8" name="toggle" />
+                        <label for="toggle8">Q. Does this SQLite database repair, supports SQLite2 & SQLite3
+                            versions?</label>
+                        <div class="accordion-content">
+                            <p> Yes, very smoothly, you can recover the SQLite database of all versions. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle9" name="toggle" />
+                        <label for="toggle9">Q. Which type of files the SQLite Database Recovery tool performs recovery
+                            from?</label>
+                        <div class="accordion-content">
+                            <p> The tool recovers and repair SQLite database files such as Sqlite.db,SQLite 2,SQLite 3
+                                and SQLite files. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle10" name="toggle" />
+                        <label for="toggle10">Q. can I recover multiple SQLite DB files in a single step with this
+                            SQLite Database recovery crack?</label>
+                        <div class="accordion-content">
+                            <p> No, you can only recover a single SQLite database at a time. Batch recovery of two or
+                                multiple files is disabled so that the software can perform effective recovery in no
+                                time. </p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle11" name="toggle" />
+                        <label for="toggle11">Q. Is the SQLite Database Recovery download utility dependent on any other
+                            software for its working?</label>
+                        <div class="accordion-content">
+                            <p>No, this is an independent software that is not dependent on any other software
+                                application for its working.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle12" name="toggle" />
+                        <label for="toggle12">Q. Do I need any other server to export Database in the form of MDB
+                            files?</label>
+                        <div class="accordion-content">
+                            <p>No, there is no need to have any other environment to migrate the SQLite to MDB. You can
+                                easily export the recovered DB into MDB.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle13" name="toggle" />
+                        <label for="toggle13">Q. How do I fix corrupt SQLite Database and repair SQLite 3
+                            database?</label>
+                        <div class="accordion-content">
+                            <p>You can follow the working instructions of the tool by following the step by step process
+                                as given below:</p>
+                            <ul>
+                                <li>Launch the SQLite Database Recovery Software.</li>
+                                <li>Click on Open to start scanning of the .db file.</li>
+                                <li>This will display all the recovered objects on the preview panel.</li>
+                                <li>Click on Export to restore the DB tables.</li>
+                                <li>Here you can opt for MS Access Database or SQLite.</li>
+                                <li>Finally, SQLite DB data is Supported.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-tab">
+                        <input type="checkbox" class="accordion-toggle" id="toggle14" name="toggle" />
+                        <label for="toggle14">Q. What process can I follow to export database files from SQLite to
+                            MDB?</label>
+                        <div class="accordion-content">
+                            <p>You can follow the steps given below:</p>
+                            <ul>
+                                <li>Select a database object/ file in the tree-structure.</li>
+                                <li>Goto the Map Column tab in the taskbar.</li>
+                                <li>Next in the Column Mapping window, select the column name and define its data type.
+                                </li>
+                                <li>Finally, click on Change Column Type and save the changes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--section-4 client reviews -->
+    <section class="faq-main-section py-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <h4 class="client-review">Client Reviews</h4>
+                    <div class="owl-carousel owl-theme">
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">SQLite Database Recovery Tool proved to be the best solution
+                                        as it helped me in recovering the Entire database file which got corrupt and i
+                                        had recovered all the data. This allows me to recover the SQL files as well as
+                                        MDF files too. Strongly recommended!</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name ">Mike</span> <span class="sp-spark"><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">I would definitely suggest you guys, to download the demo
+                                        version of the SQLite Database Recovery Software as it will help you to preview
+                                        the recovered files and locate the misplaced files easily. If any! this is
+                                        awesome software.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user " aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name ">John Doe</span> <span class="sp-spark "><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">I would like to thank the DatabaseFileRecovery Team for this
+                                        proficient tool. My team has been using this tool and they are very happy with
+                                        the features and data accuracy it provides. Simple and effective tool to repair
+                                        corrupt SQLite DB.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name">Tim Smith</span> <span class="sp-spark"><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-crwsl-cl">
+                            <div class="item">
+                                <div class="user-cont">
+                                    <p class="faq-paras">I would like to thank the team for this tool to repair corrupt
+                                        SQLite DB. The SQLite3 recovery tool offers great features and it also protects
+                                        the original structure of the database files. Above all, I am very satisfied
+                                        with the working of this tool. I will recommend this tool to everyone.</p>
+                                </div>
+                                <div class="adam d-flex">
+                                    <div> <i class="fa fa-user faq-user" aria-hidden="true"></i> </div>
+                                    <div> <span class="User-name ">George B</span> <span class="sp-spark"><i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></i>&nbsp;<i
+                                                class="fa fa-star icon-spark" aria-hidden="true"></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content"> <img src="./img/brandlogo.png" alt="brandlogo" class="img-fluid" />
+                            <p class="f-para py-3"> Sedut perspiciatis unde erroracc usantium doloremque laudantium
+                                totam remaperiaeaque ipsa quae ab illo inventore veritatis </p>
+                            <div> <i class="fa fa-facebook fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-twitter fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-linkedin fb-icon" aria-hidden="true"></i> <i
+                                    class="fa fa-instagram fb-icon" aria-hidden="true"></i> </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content ">
+                            <h4 class="foot-heads service px-1">Services</h4>
+                            <ul class="list-unstyled service-link px-1">
+                                <li class="foot-list foot-li-1"> <a href="sql-log-recovery.html" class="foot-link ">SQL
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="bkf-recovery.html" class="foot-link">BKF
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-reader.html" class="foot-link">SQL
+                                        Reader</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="mdb-reader.html" class="foot-link">MDB
+                                        Reader</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sqlite-reader.html" class="foot-link">SQLite
+                                        Reader</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content">
+                            <h4 class="foot-heads">Important links</h4>
+                            <ul class="list-unstyled">
+                                <li class="foot-list foot-li-1"> <a href="mysql-database-recovery.html" class="foot-link">MySQL Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-database-recovery.html" class="foot-link"> SQL Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="access-data-recovery.html" class="foot-link">Access Database
+                                        Recovery</a> </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-backup-repair.html" class="foot-link">SQL Backup Repair</a>
+                                </li>
+                                <li class="foot-list foot-li-1"> <a href="sql-log-recovery.html" class="foot-link">SQL Log Recovery</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-content">
+                            <h4 class="foot-heads">Contact Info</h4>
+                            <ul class="list-unstyled contact">
+                                <li class="foot-list"> <i class="fa fa-map-marker contact-icon" aria-hidden="true"></i>
+                                    sec-57 , Noida , Uttar Pradesh </li>
+                                <li class="foot-list"> <i class="fa fa-phone contact-icon" aria-hidden="true"></i>
+                                    98989897654 </li>
+                                <li class="foot-list"> <i class="fa fa-envelope-o contact-icon"
+                                        aria-hidden="true"></i>support@datarecovery.com </li>
+                                <li class="foot-list"> <i class="fa fa-clock-o contact-icon" aria-hidden="true"></i>
+                                    Opening Hour:9:00 - 18:00 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="copy"> &copy;Copyright 2018-<span id="curryr"></span> Database File Recovery | All
+                    rights reserved. </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sqlite database recovery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"> <img src="img/sqlite s1.png" class="d-block w-100"
+                                alt="step-1">
+                            <p><strong>Step 1: </strong>step 1</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sqlite s2.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 2: </strong>step 2</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sqlite s3.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 3: </strong>step 3</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sqlite s4.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 4: </strong>step 5</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sqlite s5.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 5: </strong>step 5</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sqlite s7.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 6: </strong>step 5</p>
+                        </div>
+                        <div class="carousel-item"> <img src="/img/sqlite s8.png" class="d-block w-100" alt="step-2">
+                            <p><strong>Step 7: </strong>step 5</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span> </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal end -->
+
+
+    <!-- java script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous "></script>
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/owl.carousel.js "></script>
+    <script src="js/data.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js "
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p "
+        crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js "
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF "
+        crossorigin="anonymous "></script>
+
+<!--footer date javascript -->
+<script>
+
+    document.getElementById("curryr").innerHTML = new Date().getFullYear();
+</script>
+
+
+
+    <!-- javascript -->
+    <script>
+        $(".owl-carousel ").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 3,
+                },
+                1000: {
+                    items: 3,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html> }); </script>
+</body>
+
+</html>
